@@ -1,5 +1,6 @@
 Flask
+--find-links https://download.pytorch.org/whl/cpu
 torch
 python-chess
 numpy
-gunicorn
+waitress
