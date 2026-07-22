@@ -1,0 +1,5 @@
+Flask
+torch
+python-chess
+numpy
+gunicorn

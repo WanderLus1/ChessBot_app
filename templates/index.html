@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Play Against My Chess Style AI</title>
+
+    <!-- Chessboard CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Play Against My Chess Style AI</h1>
+
+    <div id="main-container">
+
+        <!-- LEFT SIDE -->
+
+        <div id="board-section">
+
+            <div id="board"></div>
+
+            <div id="buttons">
+
+                <button id="play-white">
+                    Play as White
+                </button>
+
+                <button id="play-black">
+                    Play as Black
+                </button>
+
+                <button id="new-game">
+                    New Game
+                </button>
+
+                <button id="flip-board">
+                    Flip Board
+                </button>
+
+                <button onclick="window.location.href='/about'">
+                    About
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div id="side-panel">
+
+            <div class="panel">
+
+                <h2>Move History</h2>
+
+                <div id="move-history">
+
+                    No moves yet.
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h2>Last AI Decision</h2>
+
+                <div id="decision">
+
+                    -
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h2>Status</h2>
+
+                <div id="status">
+
+                    Choose a side to begin.
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h2>Replay</h2>
+
+                <p>
+
+                    ← Previous Move
+
+                    <br><br>
+
+                    → Next Move
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <!-- chess.js -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
+
+    <!-- chessboard.js -->
+
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+
+    <!-- Our JS -->
+
+    <script src="{{ url_for('static', filename='js/board.js') }}"></script>
+
+</body>
+
+</html>

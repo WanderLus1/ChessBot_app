@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>About • MyBot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<h1>About MyBot</h1>
+
+<div id="main-container">
+
+    <div id="side-panel" style="width:900px;max-width:95%;">
+
+        <div class="panel">
+
+            <h2>Project Overview</h2>
+
+            <p>
+
+                <strong>MyBot</strong> is a chess style imitation project built using
+                PyTorch and Flask.
+
+            </p>
+
+            <p>
+
+                Instead of maximizing playing strength, the objective was to train a
+                neural network that reproduces my own playing style from historical
+                games.
+
+            </p>
+
+            <p>
+
+                The model was trained on approximately <strong>610,000 positions</strong>
+                extracted from my personal Lichess games.
+
+            </p>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>Pipeline</h2>
+
+<pre>
+
+PGN Collection
+      │
+      ▼
+Position Encoder
+      │
+      ▼
+PyTorch Neural Network
+      │
+      ▼
+Top Candidate Moves
+      │
+      ▼
+Legal Move Filter
+      │
+      ▼
+Stockfish Evaluation
+      │
+      ▼
+MODEL / OVERRIDE Decision
+      │
+      ▼
+Move Played
+
+</pre>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>Feature Vector</h2>
+
+            <ul>
+
+                <li>Piece placement (64 squares)</li>
+
+                <li>Move number</li>
+
+                <li>Castling rights</li>
+
+                <li>En-passant availability</li>
+
+                <li>Side to move</li>
+
+                <li>Piece counts</li>
+
+                <li>Legal move count</li>
+
+                <li>Check status</li>
+
+                <li>Attack map for every square</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>Model</h2>
+
+            <ul>
+
+                <li>Framework: PyTorch</li>
+
+                <li>Dataset: ~610k positions</li>
+
+                <li>Output Space: 4096 possible moves</li>
+
+                <li>Inference: Top-k prediction with legality filtering</li>
+
+                <li>Hybrid evaluation using Stockfish</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>MODEL vs OVERRIDE</h2>
+
+            <p>
+
+                Every move displayed during a game indicates whether it was played
+                directly by the neural network or selected by Stockfish.
+
+            </p>
+
+            <ul>
+
+                <li><strong>✔ MODEL</strong> — Neural network move accepted.</li>
+
+                <li><strong>⚙ OVERRIDE</strong> — Neural network move rejected after
+                Stockfish evaluation.</li>
+
+                <li><strong>♔ ENDGAME</strong> — Pure Stockfish is used for simple
+                endgames.</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>Technology Stack</h2>
+
+            <ul>
+
+                <li>Python</li>
+
+                <li>PyTorch</li>
+
+                <li>Flask</li>
+
+                <li>python-chess</li>
+
+                <li>Stockfish</li>
+
+                <li>HTML / CSS / JavaScript</li>
+
+                <li>Chessboard.js</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>Future Improvements</h2>
+
+            <ul>
+
+                <li>Transformer-based architecture</li>
+
+                <li>Improved move encoding for underpromotions</li>
+
+                <li>Better handling of decisive winning positions</li>
+
+                <li>Lichess Bot deployment</li>
+
+                <li>Reinforcement Learning fine-tuning</li>
+
+                <li>Model vs Model tournaments</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>Links</h2>
+
+            <p>
+
+                <strong>GitHub</strong><br>
+                <a href="https://github.com/WanderLus1">WanderLus1</a>
+
+            </p>
+
+            <p>
+
+                <strong>LinkedIn</strong><br>
+                <a href="https://www.linkedin.com/in/hriday-panchal-b85997370/">LinkedIn</a>
+
+            </p>
+
+            <p>
+
+                <strong>Lichess</strong><br>
+                <a href="https://lichess.org/@/hriday_tm">hriday_tm</a><br>
+                <a href="https://lichess.org/@/totaltimepass">totaltimepass</a><br>
+                <a href="https://lichess.org/@/hridaypanchal">hridaypanchal</a>
+
+            </p>
+
+            <p>
+
+                <strong>Chess.com</strong><br>
+                <a href="https://www.chess.com/member/rusty_nightmare">rusty_nightmare</a>
+
+            </p>
+
+        </div>
+
+        <div style="text-align:center;margin-top:25px;">
+
+            <button onclick="window.location.href='/'">
+
+                ← Back to Board
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+body {
+
+    margin: 0;
+
+    padding: 30px;
+
+    background: #1f1f1f;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+#main-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 40px;
+
+}
+
+
+#board-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+#board {
+
+    width: 600px;
+
+    max-width: 90vw;
+
+}
+
+
+#buttons {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+button {
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    background: #2d2d2d;
+
+    color: white;
+
+}
+
+
+button:hover {
+
+    background: #444;
+
+}
+
+
+#side-panel {
+
+    width: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.panel {
+
+    background: #2a2a2a;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+}
+
+
+.panel h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 12px;
+
+}
+
+
+#move-history {
+
+    max-height: 420px;
+
+    overflow-y: auto;
+
+    font-family: monospace;
+
+}
+
+
+.move-row {
+
+    display: grid;
+
+    grid-template-columns: 40px 90px 90px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.move-number {
+
+    color: #aaaaaa;
+
+}
+
+
+.white-move {
+
+    color: white;
+
+}
+
+
+.black-move {
+
+    color: #dddddd;
+
+}
+
+
+#decision {
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+}
+
+
+#status {
+
+    font-size: 17px;
+
+}
