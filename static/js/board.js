@@ -438,3 +438,12 @@ function resetReplay() {
     replayIndex = replayMoves.length;
 
 }
+
+// -----------------------------------------------------
+// Auto-resize board for mobile responsiveness
+// -----------------------------------------------------
+$(window).resize(function() {
+    if (board) {
+        board.resize();
+    }
+});
