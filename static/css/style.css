@@ -131,3 +131,15 @@ button:hover {
         max-height: 380px;
     }
 }
+
+/* Prevent full-page scrolling while dragging chess pieces on mobile */
+#board, #board * {
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Enable smooth touch interaction on buttons and side panels */
+#buttons button, .panel {
+    touch-action: manipulation;
+}
