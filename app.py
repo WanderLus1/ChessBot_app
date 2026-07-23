@@ -47,7 +47,7 @@ model.eval()
 engine = chess.engine.SimpleEngine.popen_uci(
     "stockfish/stockfish"
 )
-
+engine.configure({"Threads": 1})
 
 # -------------------------------------------------------
 # Helper functions
